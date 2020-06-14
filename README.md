@@ -1,6 +1,6 @@
 # test-developer-stant
 
-Api organização de palestras
+API organização de palestras
 
 ## Configurações
 
@@ -51,3 +51,8 @@ Api organização de palestras
 
 1. Para o endpoint `POST /api/upload`
    - Inserir no `body` da requisição o tipo `Multipart Form` e nome do arquivo `'file'`
+   
+## Aplicação hospedada no Google Cloud
+
+1. Para acessar, clique no link abaixo
+   - http://35.232.123.130/
