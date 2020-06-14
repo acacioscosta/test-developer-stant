@@ -10,6 +10,7 @@ Api organização de palestras
    - git clone https://github.com/acacioscosta/test-developer-stant.git
 
 2. Entre no diretório "api/", crie um arquivo config.json e copie os dados de config.example.json;
+   - Se estiver no Linux, use o comando `cp config.example.json config.json`
 3. Arquivo config.json contém as configurações da aplicação, como conexão com banco de dados, porta para o servidor e migrate
    - Para este caso, não precisa inserir o `database`;
    - Explicando `migrate`
