@@ -1,6 +1,7 @@
 const server = require('./config/server')
 const dbConnection = require('./config/database')
 const { migrate, port } = require('./config.json')
+const fs = require('fs')
 
 server.listen(port || 3000, () => {
 
@@ -40,6 +41,14 @@ server.listen(port || 3000, () => {
 
         console.log('Created!')
     }
+
+    /**
+     * @description verifica se existe o diretório uploads
+     * @description Se não existir, cria
+     */
+    const dirUploadExist = fs.existsSync('./uploads')
+
+    if (!dirUploadExist) fs.mkdirSync('./uploads')
 
     console.log(`Server ON at port ${port || 3000}`)
 })
