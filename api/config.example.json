@@ -1,0 +1,11 @@
+{
+    "port": "",
+
+    "host": "",
+    "user": "",
+    "password": "",
+    "db_port": "",
+    "database": "",
+
+    "migrate": false
+}
