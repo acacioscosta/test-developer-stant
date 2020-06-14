@@ -26,6 +26,16 @@ speech.prototype.list = function(trackId, callback) {
     dbConnection.query(sql, [trackId], callback)
 }
 
+/**
+ * @description Apaga todos os dados de speechs
+ * @param {Function} callback 
+ */
+speech.prototype.delete = function(callback) {
+    const sql = `TRUNCATE TABLE conferences.speechs`
+
+    dbConnection.query(sql, callback)
+}
+
 module.exports = function() {
     return speech
 }

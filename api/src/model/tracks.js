@@ -23,6 +23,16 @@ track.prototype.list = function(callback) {
     dbConnection.query(sql, callback)
 }
 
+/**
+ * @description Apaga todos os dados de tracks
+ * @param {Function} callback 
+ */
+track.prototype.delete = function(callback) {
+    const sql = `TRUNCATE TABLE conferences.tracks`
+
+    dbConnection.query(sql, callback)
+}
+
 module.exports = function() {
     return track
 }

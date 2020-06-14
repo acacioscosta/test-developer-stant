@@ -28,14 +28,16 @@ const upload = multer({ storage })
  */
 module.exports = app => {
 
-    app.get('/', (req, res) => { return res.send('API Organização de Palestras') } )
+    app.get('/api', (req, res) => { return res.send('API Organização de Palestras') } )
 
-    app.get('/tracks', (req, res) => app.src.controller.list.list(app, req, res) )
+    app.get('/api/tracks', (req, res) => app.src.controller.list.list(app, req, res) )
 
-    app.post('/upload', upload.single('file'), (req, res) => {
+    app.post('/api/upload', upload.single('file'), (req, res) => {
 
         app.src.controller.add.save(app, req, res)
 
     })
+
+    app.get('/api/clear', (req, res) => app.src.controller.delete.delete(app, req, res) )
 
 }
