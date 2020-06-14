@@ -89,6 +89,7 @@
     var app = new Vue({
       el: '#app',
       data: {
+        baseUrl: 'http://localhost:3000/api',
         tracks: [],
         file: undefined,
         message: ''
@@ -97,7 +98,7 @@
         getTracks() {
           this.tracks = []
 
-          fetch('http://localhost:3000/api/tracks')
+          fetch(`${this.baseUrl}/tracks`)
             .then(response => response.json())
             .then(data => {
               return data.length === 0
@@ -112,13 +113,13 @@
           const data = new FormData()
           data.append('file', this.file)
           
-          fetch('http://localhost:3000/api/upload', { method: 'POST', body: data })
+          fetch(`${this.baseUrl}/upload`, { method: 'POST', body: data })
             .then(response => response.json())
             .then(data => alert(data.message))
 
         },
         clearTracks() {
-          fetch('http://localhost:3000/api/clear')
+          fetch(`${this.baseUrl}/clear`)
             .then(response => response.json())
             .then(data => this.tracks = [])
         }
