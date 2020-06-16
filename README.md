@@ -55,4 +55,4 @@ API organização de palestras
 ## Aplicação hospedada no Google Cloud
 
 1. Para acessar, clique no link abaixo
-   - http://35.232.123.130/
+   - http://34.71.248.255/
