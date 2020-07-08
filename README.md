@@ -51,8 +51,3 @@ API organização de palestras
 
 1. Para o endpoint `POST /api/upload`
    - Inserir no `body` da requisição o tipo `Multipart Form` e nome do arquivo `'file'`
-   
-## Aplicação hospedada no Google Cloud
-
-1. Para acessar, clique no link abaixo
-   - http://34.71.248.255/
